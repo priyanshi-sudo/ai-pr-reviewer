@@ -1,0 +1,17 @@
+review:
+  ignore:
+    - "**/*.lock"
+    - "**/__snapshots__/**"
+    - "pnpm-lock.yaml"
+    - "**/*.min.js"
+    - "**/migrations/**"
+  max_comments_per_pr: 25
+  severity_threshold: "info"   # info | warn | error
+
+linters:
+  python: ["ruff", "mypy"]
+  typescript: ["eslint"]
+
+llm:
+  model: "claude-sonnet-4-6"
+  temperature: 0.0
